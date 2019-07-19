@@ -1,7 +1,7 @@
 <template>
   <div>
   <button @click="reduce"> - </button>
-  <span>{{value}}</span>
+  <span>{{value}}</span>    
   <button @click="add"> + </button>
 
   </div>
