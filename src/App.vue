@@ -1,17 +1,22 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <First></First>
+    <input v-model.number="num">
+    <CounterGroup :counterNum="num"></CounterGroup>
   </div>
 </template>
-
 <script>
-import First from './components/First.vue'
-
+import CounterGroup from './components/CounterGroup'
 export default {
   name: 'app',
   components: {
-    First
+    CounterGroup
+  },
+  data(){
+    return {
+      num:0
+    }
+  },
+  methods:{
   }
 }
 </script>

@@ -1,7 +1,7 @@
 <template>
   <div>
   <button @click="reduce"> - </button>
-  <span>{{value}}</span>    
+  <span style="margin:10px;">{{value}}</span>    
   <button @click="add"> + </button>
 
   </div>
@@ -9,8 +9,8 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
-  props: {},
+  props: {
+  },
   data(){
     return{
       value:0,
@@ -19,9 +19,11 @@ export default {
   methods:{
     add(){
       this.value++;
+      this.$emit("add");
     },
     reduce(){
       this.value--;
+      this.$emit("reduce")
     }
   }
 

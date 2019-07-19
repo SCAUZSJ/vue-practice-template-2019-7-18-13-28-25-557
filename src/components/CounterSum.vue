@@ -1,9 +1,12 @@
 <template>
-  <div></div>
+  <div>
+      总和：{{counterSum}}
+  </div>
 </template>
 
 <script>
 export default {
+props:['counterSum'],
   data () {
     return {
     };
@@ -22,6 +25,7 @@ export default {
   filters:{},
 
 }
+
 </script>
 <style lang='scss' scoped>
 </style>
