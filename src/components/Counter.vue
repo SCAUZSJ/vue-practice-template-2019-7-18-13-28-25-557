@@ -7,6 +7,7 @@
 </template>
 
 <script>
+ import { mapMutations, mapGetters} from 'vuex'
 export default {
   props: {
   },
@@ -15,17 +16,25 @@ export default {
     }
   },
   computed:{
-    countNum(){
-      return this.$store.getters.getCountNum
-    }
+    // countNum(){
+    //   return this.$store.getters.getCountNum
+    // },
+  ...mapGetters({
+     countNum : 'getCountNum'
+     })
   },
   methods:{
-    increase(){
-      this.$store.commit("increase");
-    },
-    decrease(){
-      this.$store.commit('decrease');
-    }
+     ...mapMutations([
+      'increase', 
+      'decrease'
+    ]),
+    // increase(){
+    //   this.$store.commit("increase");
+    // },
+    // decrease(){
+    //   this.$store.commit('decrease');
+    // },
+    
   }
 
 }
