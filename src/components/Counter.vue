@@ -1,8 +1,8 @@
 <template>
   <div>
-  <button @click="reduce"> - </button>
-  <span style="margin:10px;">{{value}}</span>    
-  <button @click="add"> + </button>
+  <button @click="decrease"> - </button>
+  <span style="margin:10px;">{{countNum}}</span>    
+  <button @click="increase"> + </button>
   </div>
 </template>
 
@@ -12,17 +12,19 @@ export default {
   },
   data(){
     return{
-      value:0,
+    }
+  },
+  computed:{
+    countNum(){
+      return this.$store.getters.getCountNum
     }
   },
   methods:{
-    add(){
-      this.value++;
-      this.$emit("add");
+    increase(){
+      this.$store.commit("increase");
     },
-    reduce(){
-      this.value--;
-      this.$emit("reduce")
+    decrease(){
+      this.$store.commit('decrease');
     }
   }
 

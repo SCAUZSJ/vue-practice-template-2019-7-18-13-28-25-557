@@ -1,29 +1,27 @@
 <template>
   <div id="app">
-    <input v-model.number="num">
-    <CounterGroup :counterNum="num"></CounterGroup>
+   <counter></counter>
   </div>
 </template>
 <script>
-import CounterGroup from './components/CounterGroup'
+import Counter from "./components/Counter";
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    CounterGroup
+    Counter
   },
-  data(){
+  data() {
     return {
-      num:0
-    }
+      num: 0
+    };
   },
-  methods:{
-  }
-}
+  methods: {}
+};
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
