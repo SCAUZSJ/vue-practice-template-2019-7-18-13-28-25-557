@@ -3,7 +3,6 @@
   <button @click="reduce"> - </button>
   <span style="margin:10px;">{{value}}</span>    
   <button @click="add"> + </button>
-
   </div>
 </template>
 

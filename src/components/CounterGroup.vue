@@ -1,7 +1,7 @@
 <template>
   <div>
       <div v-for="item of counterNum" :key="item">
-        <counter @add="totalAdd" @reduce="totalReduce"></counter>
+        <counter @add="totalAdd" @reduce="totalReduce" ></counter>
       </div>
       <couter-sum :counterSum="total"></couter-sum>
   </div>
@@ -17,7 +17,6 @@ export default {
         total:0
     };
   },
-
   components: {
     Counter,
     CouterSum
